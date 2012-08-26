@@ -1,0 +1,153 @@
+/* äöü - UTF-8 required! */
+/*!
+ * base.css "HTML5ish edition" featuring 'normalise.css'
+ * @version 1.6.9 18.04.2012
+ * personal likings + defaults mixed with inspirational input from
+ * @credits E. Meyer, Yahoo!, N. Sullivan, D. Edwards, CSS-WG, W3C, H5BP, and the Interwebs.
+ * @license WTFPL
+ */
+html{font-size:12.985px;overflow-y:scroll}
+body{font-size:100.1%;-webkit-text-size-adjust:100.1%; -ms-text-size-adjust:100.1%}
+* {-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+
+/* Gecko Hacks */
+@media screen,handheld,projection{html{margin-bottom:1px;min-height:100%}}
+/* iPhone 3=163 ppi (std. 112 x 1.455) */
+@media screen and (min-resolution: 160dpi){html{font-size:21px}}
+/* iPhone 4=326 ppi (std. 112 x 2,911) */
+@media screen and (min-resolution: 320dpi){html{font-size:38px}}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,menu,section{display:block}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none}
+[hidden]{display:none}
+body,figure,form,button,input,select,textarea{margin:0}
+a:focus{outline:thin dotted}
+a:hover,a:active{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+small,sub,sup{font-size:75%}
+sub,sup{line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+nav ul,nav ol{list-style:none;list-style-image:none}
+img{border:0;-ms-interpolation-mode:bicubic}
+svg:not(:root){overflow:hidden}
+fieldset{margin:.625em 2px;padding:1ex .625em 1ex}
+legend{border:0;*margin-left:-7px;padding-left:.625em;padding-right:.625em}
+button,input{line-height:1;*overflow:visible}
+button,input,select,textarea{font-family:sans-serif;vertical-align:baseline;*vertical-align:middle}
+table button,table input{*overflow:auto}
+button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}
+input[type="checkbox"],input[type="radio"]{padding:0;width:1em;-webkit-box-sizing:border-box;/*SF3*/-moz-box-sizing:border-box;box-sizing:border-box}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+
+/* =kinda layout and some "resets" */
+html,body,article,footer,header,section,aside,nav,figure,details{position:relative;_zoom:1}
+hgroup,summary{display:block;_zoom:1}
+/*details{padding-left:2ex;margin:1em 0}*/
+/*meter,progress{vertical-align:-0.2em;width:5em;height:1em;display:inline-block;*display:inline;*zoom:1}*/
+h1,h2,h3,h4,h5,h6,.H1,.H2,.H3,.H4,.H5,.H6{margin-top:0;margin-bottom:.625ex}
+p,pre,listing,xmp{margin-top:0;margin-bottom:.625ex}
+blockquote{margin:0 2em;padding:1ex .5em}
+fieldset{border:1px solid}
+dfn[title]{border-bottom:1px dotted}
+img{vertical-align:middle}
+
+/* =sorta typography */
+/* html{-webkit-text-size-adjust:55%;-ms-text-size-adjust:55%;font-size-adjust:0.55} */
+body{font-family:"Trebuchet MS",Arial,Helvetica,sans-serif;word-wrap:break-word}
+table,dl,ol,ul,form,fieldset,output{font-size:100%;font-weight:normal}
+body,p,address,blockquote,li,dt,dd{line-height:1.6}
+caption,th{text-align:center;font-weight:bold}
+tbody th{text-align:left;vertical-align:top}
+address,caption,cite,dfn,ins,del,figcaption,details{font:inherit}
+code,kbd,listing,samp,tt,pre,xmp{font:normal 95% 'Lucida Console','Andale Mono','Courier New',monospace,sans-serif}
+listing,pre,xmp{line-height:1;-webkit-tab-size:4;-moz-tab-size:4;-o-tab-size:4;-ms-tab-size:4;tab-size:4;}
+code,samp,pre,var{-webkit-hyphens:none;-moz-hyphens:none;hyphens:none}
+pre{overflow-x:auto; /* Firefox 2 */
+	word-wrap:break-word; /* Internet Explorer 5.5+ */
+	white-space:-moz-pre-wrap !important; /* Mozilla, since 1999 */
+	white-space:-pre-wrap; /* Opera 4-6 */
+	white-space:-o-pre-wrap; /* Opera 7+ */
+	white-space:pre-wrap; /* css-3 */
+}
+button,input,select,textarea{font-size:99%}
+b,strong,dt{font-weight:bold}
+i,em{font-style:italic}
+form,fieldset,legend,th,td,mark{line-height:1}
+/* =once for all and anything */
+/* for those who can handle it = !MSIE6,7 !WebKit */
+q:before,q:after{font-family:"Adobe Caslon Pro",Georgia,"Times New Roman",Times,serif;font-size:1.1em;line-height:1}
+q{quotes: '„' '“' '‚' '‘' }
+[lang|=de] q,q[lang|=de]{quotes: '„' '“' '‚' '‘'; }
+[lang|=en] q,q[lang|=en]{quotes: '“' '”' '‘' '’'; }
+[lang|=fr] q,q[lang|=fr]{quotes: '«' '»' '<' '>'; }
+
+/* =lists */
+ul,ol,dl{margin:1ex auto .625em 1ex;padding:0 0 0 1ex}
+ol{list-style:decimal}
+ul{list-style:disc}
+li{display:list-item;list-style-position:outside;text-indent:0;margin-left:1.2ex;vertical-align:top}
+dd{margin-left:1.2ex;-moz-margin-start:0;-webkit-margin-start:0;-ms-margin-start:0}
+ol li{margin-left:1.7ex}
+dd ol,dd ul{padding-left:1ex}
+li ol,li ul{padding-left:0;margin-top:0;margin-bottom:0}
+blockquote{margin-left:1.2ex}
+
+/* =bits of color */
+body{color:#222; background:white}
+a,a:hover{color:inherit}
+mark{background-color:yellow}
+::selection{background:#333;color:#eee;text-shadow:none}
+
+/* =wgac, bitv, off-screen contents */
+.wgac, .invisible{position:absolute;display:inline;left:-27766px;z-index:-1;overflow:hidden;width:1px;line-height:1px;border:none;background:none}
+/* =Clears A0~nbsp */
+.clr,.clear{float:none;clear:both;}
+.clearfix:after,.clear:after{content:"\A0\A0\A0";visibility:hidden;clear:both;height:0 !important;display:block;line-height:0;font-size:xx-small;overflow:hidden}
+br.clear, hr.clear{float:none;clear:both;display:block;border:none;height:0;margin:0;padding:0;z-index:-1}
+
+/* Trident hacks IE6 (star hack), IE7 (first-child+) */
+* html{overflow:auto;font-size:medium}
+*:first-child+html{overflow:auto}
+* html .clr{*display:block;*zoom:1}
+* html .clr{_position:relative;_left:-3px;_margin-right:-3px}
+* html hr.clear,
+* html br.clear,
+*:first-child+html hr.clear,
+*:first-child+html br.clear{position:relative;font-size:0;line-height:0;border:0 solid;margin:-9px 0}
+.msie img {filter: progid:DXImageTransform.Microsoft.ICMFilter(ColorSpace=sRGB)}
+
+/* simple print styles for common stuff (at least for what I do), inlined to
+ * avoid another HTTP connection 'cos browsers download "print styles" anyway.
+ * http://www.phpied.com/delay-loading-your-print-css/
+ * in FF @page, orphans, windows are screwed up, page-break-* are broken
+ */
+@media print {
+	/* hidden from dead trees */
+	menu, nav, .menu, .hmenu, #mainmenu, .pagination, .crumbs, #breadcrumbs, .back, #back2top{display:none}
+
+	/* generated content */
+	blockquote:before, blockquote:after{content:"";display:none}
+
+	*{background:transparent !important;color:#000 !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important} /* black prints faster */
+	a, a:visited{color:#000 !important;text-decoration:underline}
+	p a:after{content:" (" attr(href) ")";font-size:smaller}
+	acronym:after,abbr:after{content:" (" attr(title) ")";font-size:smaller}
+	pre,blockquote,fieldset{border:1px solid rgb(128,128,128)}
+	table[border]{box-decoration-break:clone}
+	thead{display:table-header-group} /* css-discuss.incutio.com/wiki/Printing_Tables */
+	p,h2,h3{orphans:3;widows:3}
+	pre,blockquote,tr,img,h2,h3{page-break-after:avoid}
+
+	#logo,.logo {width:auto;max-width:100%;overflow:hidden;text-align:left}
+	#logo a {display:inline;margin:0;padding:1ex;}
+}
+
+/* .eof */

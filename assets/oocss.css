@@ -1,0 +1,94 @@
+/**!
+ * oocss.css (c)2009-2012 Nicole Sullivan. All rights reserved. BSD License. http://oocss.org/
+ * feat. custom "menu.css" (c)2011-2012 WebMechanic.biz. All rights reserved. BSD License.
+ * @version 05.08.2012 (grids.css, grids_rtl.css, mods.css, menu.css)
+ */
+/* grids.css */
+.line,.lastUnit{overflow:hidden;*overflow:visible;*zoom:1;}
+.unit{float:left}
+.unitRight{float:right}
+.lastUnit{float:none;width:auto;_position:relative;_left:-3px;_margin-right:-3px;}
+/* aside .unit, aside .unitRight{float:none !important;width:auto !important} */
+@media print, screen and (max-width:481px) {.unit,.unitRight{float:none !important;/*width:auto !important*/}}
+
+.size1of1 {float:none}
+.size1of2,
+.size2of4,
+.size3of6 {width:50%}
+
+.size1of3 ,
+.size2of6 {width:33.33333%}
+.size2of3 ,
+.size4of6 {width:66.66666%}
+
+.size1of4 {width:25%}
+.size3of4 {width:75%}
+
+.size1of5 {width:20%}
+.size2of5 {width:40%}
+.size3of5 {width:60%}
+.size4of5 {width:80%}
+
+.size1of6 {width:16.66666%}
+.size5of6 {width:83.33333%}
+
+/* grids_rtl.css */
+.rtl {direction:rtl}
+.rtl .unit{float:right}
+.rtl .unitRight{float:left}
+.rtl .lastUnit{_right:-3px;_margin-left:-3px;_margin-right:0;_left:0}
+
+/* mod.css (.mod > .inner > .hd|bd|ft) */
+.mod {margin:10px}
+.mod .inner{/* background stuff goes here */}
+/* .bd,.ft,.hd{display:inline-block;width:100%;*display:block;*width:auto;zoom:1} */
+.bd,.ft,.hd{overflow:hidden;*overflow:visible;zoom:1;}
+.inner{position:relative}
+/* (.mod > b.top|bottom) (b.top > .tl|tr) (b.bottom > .bl|br) */
+b.top, b.top b, b.bottom, b.bottom b{display:block;background-repeat:no-repeat;font-size:1%;position:relative;z-index:10}
+.tl, .tr, .bl, .br{height:10px;width:10px}
+.tl{float:left;background-position:left top}
+.tr{float:right;background-position:right top}
+.bl{float:left;background-position:left bottom}
+.br{float:right;background-position:right bottom}
+.tr, .tl{overflow:hidden;margin-bottom:-32000px}/* margin bottom needs to be < -9px */
+.bl, .br{margin-top:-10px}
+.mod .top{background-position:center top}
+.mod .bottom{background-position:center bottom}
+
+/* .mod.complex */
+.complex{overflow:hidden;*position:relative;*zoom:1}/* position/zoom required for IE7, 6, 5.5 */
+.complex .tl, .complex .tr{height:32000px;margin-bottom:-32000px;width:10px}
+.complex .bl, .complex .br{/*margin-top:0;*/}
+.complex .top{height:5px}
+.complex .bottom{height:5px;/*margin-top:-10px;*/}
+
+/* .mod.pop */
+.pop{overflow:visible;margin:10px 20px 20px 10px;background-position:left top}
+.pop .inner{right:-10px;bottom:-10px;background-position:right bottom;padding:0 10px 10px 0}
+.pop .tl, .pop .br{display:none}
+.pop .bl{bottom:-10px}
+.pop .tr{float:right;margin-right:-10px;_display:inline;/*fix double margin bug*/ }
+
+/* http://www.stubbornella.org/content/2010/12/09/the-hacktastic-zoom-fix/ */
+.line:after,
+.lastUnit:after,
+.mod .inner:after,
+.inner .hd:after,
+.inner .bd:after,
+.inner .ft:after{clear:both;display:block;visibility:hidden;overflow:hidden;height:0 !important;line-height:0;content:"\A0"}
+
+/* menus ( [ul|ol] .menu[.hmenu] > li.mi ) */
+menu, .menu, .hmenu {list-style:none;margin:0;padding:0}
+.menu li.mi {display:block;padding:.2ex .4em;margin:auto 0;word-wrap:break-word}
+menu a, a.mi {text-decoration:none}
+/* nested */
+menu .submenu, .menu .submenu {position:relative;z-index:277}
+/* horizontal (.menu .hmenu) */
+.hmenu {display:block}
+.hmenu li.mi {position:relative;display:inline-block;*zoom:1;*display:inline !ie7;}
+.hmenu * li.mi {min-width:10em}
+.hmenu .flyout {position:absolute;margin:0 0 0 100%;top:0}
+.flyout li:hover ul {display:block}
+/* catch all for a.mi span.mi */
+.li{color:inherit}
