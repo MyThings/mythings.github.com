@@ -31,7 +31,8 @@ body {
 	background-image:  linear-gradient(to bottom,  hsl(220,60%,22%) 0%, hsl(220,65%,40%) 30%, hsl(220,65%,40%) 65%, hsl(220,60%,22%) 100%);
 }
 .titles, .cover, .features {box-shadow:0 0 1em hsl(220,60%,22%)}
-.repolist .zips {
+.zips li {margin-left:4ex} /* wg. der columns :( */
+.zips {
 	-webkit-column-count:2;-webkit-column-gap:1em;
 	   -moz-column-count:2;   -moz-column-gap:1em;
 	        column-count:2;        column-gap:1em;
@@ -39,7 +40,7 @@ body {
 
 @media screen and (max-width:810px) {
 	.subtitle {font-size:160%}
-	.features .zips {-webkit-column-count:1;-moz-column-count:1;column-count:1;}
+	.zips {-webkit-column-count:1;-moz-column-count:1;column-count:1;}
 }
 </style>
 <link rel="Shortcut icon" href="favicon.ico" type="image/x-icon" />
