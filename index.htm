@@ -7,14 +7,19 @@
 <link rel="stylesheet" href="assets/oocss.css">
 <style type="text/css">
 body {background-color:#162c59;color:#fff;margin:0px;padding:20px 0}
+p, li {-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto}
+a, a:hover {color:#33baab}
+p a, li a:hover {color:inherit;text-decoration:underline}
 
 .titles 		{background-color:#33baab;padding-left:2em;margin-left:5em;margin-right:0}
 .H1, .pagetitle	{font-size:400%;line-height:1;padding-top:.64ex}
 .H2, .subtitle	{font-size:200%;line-height:1;padding-bottom:.64ex}
 
 .content-main		{margin:20px 20px 20px -10px}
-.features			{background-color:#162c59;margin-top:0}
-.features .inner	{padding:20px 30px}
+.repolist			{margin-right:20px}
+.repolist, .features{background-color:#162c59;margin-top:0}
+.repolist .inner	{padding:20px 30px}
+.features .inner	{padding:10px 20px}
 .media 				{text-align:right}
 .cover 				{max-width:100%;height:auto}
 
@@ -25,8 +30,8 @@ body {
 	background-image:      -o-linear-gradient(top, hsl(220,60%,22%) 0%, hsl(220,65%,40%) 30%, hsl(220,65%,40%) 65%, hsl(220,60%,22%) 100%);
 	background-image:  linear-gradient(to bottom,  hsl(220,60%,22%) 0%, hsl(220,65%,40%) 30%, hsl(220,65%,40%) 65%, hsl(220,60%,22%) 100%);
 }
-.titles, .cover {box-shadow:0 0 1em hsl(220,60%,22%)}
-.features .zips {
+.titles, .cover, .features {box-shadow:0 0 1em hsl(220,60%,22%)}
+.repolist .zips {
 	-webkit-column-count:2;-webkit-column-gap:1em;
 	   -moz-column-count:2;   -moz-column-gap:1em;
 	        column-count:2;        column-gap:1em;
@@ -49,33 +54,44 @@ body {
 
 	<div class="line content-main">
 		<div class="unit size2of3 intro">
-			<div class="mod features">
+			<div class="mod repolist">
 			<div class="inner">
 				<div class="hd"><h3 class="H2">Der Code zum Buch</h3></div>
 				<div class="bd">
 				<p>Aus dem Inhalt:</p>
-				<!-- auch so eine Idiotie des W3C: Zahlen == Inhalt. Wieso CSS counter? -->
+				<!-- auch so eine W3C-Idee: Zahlen == Inhalt aber 'deprecated' ... und dann CSS counter? -->
 				<ol class="zips" start=3>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Erste Ausgabe im Frontend </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Unser erstes Modul </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Das erste Plugin </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Sprachen </span></a></li>
-
-				<li class="mi" value=9><a class="mi" href=""><span class="mi"> Joomla-API </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Unsere Komponente Backend </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Formulare cleverer </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Fehlerbehandlung </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Alles bleibt anders </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Filter, Sortierung und Pagination </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Kategorien, User und JForms </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Kosmetik fürs Frontend </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Plugins </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Module: Daten immer anders </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Die Komponente wird konfigurierbar </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Wer darf was? Zugriffsrechte </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Formular im Frontend </span></a></li>
-				<li class="mi"><a class="mi" href=""><span class="mi"> Routing und SEF </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/com_mythings"			data-branch="kap03" ><span class="mi"> Erste Ausgabe im Frontend </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/mod_mythingsstats"		data-branch="master"><span class="mi"> Unser erstes Modul </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/plg_content_mytitel"	data-branch="master"><span class="mi"> Das erste Plugin </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/mod_mythingsstats"		data-branch="master"><span class="mi"> Sprachen </span></a></li>
+				<li class="mi"
+				       value=9><a class="mi" href="//github.com/MyThings/kapitel-09"			data-branch="master"><span class="mi"> Joomla-API </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/com_mythings"			data-branch="kap10"><span class="mi"> Unsere Komponente Backend </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/plg_system_jforms"		data-branch="master"><span class="mi"> Formulare cleverer </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/kapitel-12"			data-branch="master"><span class="mi"> Fehlerbehandlung </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/com_mythings"			data-branch="kap13"><span class="mi"> Alles bleibt anders </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/com_mythings"			data-branch="kap14"><span class="mi"> Filter, Sortierung und Pagination </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/com_mythings"			data-branch="kap15"><span class="mi"> Kategorien, User und JForms </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/kapitel-16"			data-branch="master"><span class="mi"> Kosmetik fürs Frontend </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/plg_content_background"data-branch="master"><span class="mi"> Plugins </span> (Hintergrundbild)</a></li>
+				<li class="mi"
+				      value=17><a class="mi" href="//github.com/MyThings/plg_system_mythings"	data-branch="master"><span class="mi"> Plugins </span> (Benutzerdefiniert)</a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/mod_mythingsall"		data-branch="master"><span class="mi"> Module: Daten immer anders </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/com_mythings"			data-branch="kap19"><span class="mi"> Die Komponente wird konfigurierbar </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/com_mythings"			data-branch="kap20"><span class="mi"> Wer darf was? Zugriffsrechte </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/com_mythings"			data-branch="kap21"><span class="mi"> Formular im Frontend </span></a></li>
+				<li class="mi"><a class="mi" href="//github.com/MyThings/kapitel-22"			data-branch="master"><span class="mi"> Routing und SEF </span></a></li>
 				</ol>
+				</div>
+				<div class="ft">
+					<p>Manchmal muss es eine eigene Erweiterung sein! Und Erweiterungen für Joomla! zu entwickeln, ist gar nicht so schwer.
+					Dieses Buch zeigt, wie Sie eine maßgeschneiderte Lösung für Ihren Bedarf entwickeln.
+					<br>
+					<a href="http://chmst.de">Christiane Maier-Stadtherr</a>,
+					<a href="http://webmechanic.biz">René Serradeil</a> und
+					<a href="http://time4mambo.de">Axel Tüting</a>
+					beschreiben Schritt für Schritt das Vorgehen vom Entwurf bis zur fertigen eigenen Komponente.</p>
 				</div>
 				<a href="https://github.com/MyThings"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
 			</div>
@@ -87,6 +103,29 @@ body {
 			<img class="cover" src="assets/joomla-extensions-entwickeln-2012.jpg" width="350" height="500" alt="Buchcover: Joomla!-Extensions entwickeln" />
 			</a>
 			<p class="clr"><small>Affiliate</small></p>
+		</div>
+	</div>
+
+	<div class="line">
+		<div class="unit size1of3">
+			<div class="mod features"><div class="inner">
+			<h3>Komponenten, Module und Plugins</h3>
+			<p>Es gibt unterschiedliche Möglichkeiten, Erweiterungen in Joomla! einzubringen. Neben einer größeren Komponente werden Ihnen hier auch Beispiele für die Erstellung zusätzlicher Module oder eines Plugins gezeigt.</p>
+			</div></div>
+		</div>
+
+		<div class="unit size1of3">
+			<div class="mod features"><div class="inner">
+			<h3>Die Joomla-API</h3>
+			<p>Die Programmierschnittstelle von Joomla! ist sehr umfangreich. Mit der Einführung des Frameworks und später der Joomla! Platform wurde zwar einiges vereinfacht und vereinheitlicht, aber trotzdem ist es schwer, hier einen Überblick zu erlangen. Damit Sie sich in der Fülle der Klassen und Methoden zurechtfinden, gibt es in diesem Buch eine Einführung in die Joomla-API.</p>
+			</div></div>
+		</div>
+
+		<div class="unit size1of3">
+			<div class="mod features"><div class="inner">
+			<h3>Vom Entwurf bis zum Installer</h3>
+			<p>Zuerst steht eine Idee, was eine Erweiterung können soll, dann aber muss diese umgesetzt werden. Am Beispiel einer Komponente für ein Verleihsystem, das mit unterschiedlichen Funktionalitäten aufwartet, wird dieser Prozess in allen Schritten durchgespielt.</p>
+			</div></div>
 		</div>
 	</div>
 
