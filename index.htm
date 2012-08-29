@@ -6,38 +6,39 @@
 <link rel="stylesheet" href="assets/base.css">
 <link rel="stylesheet" href="assets/oocss.css">
 <style type="text/css">
-body {background:#204080;color:#fff;margin:0px;padding:20px 0}
+body {background:#004797;color:#fff;margin:0px;padding:20px 0}
 p, li {-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto}
-a, a:hover {color:#33baab}
+a, a:hover {color:#66AB50}
 p a, li a:hover {color:inherit;text-decoration:underline}
 
-.titles 		{background:#33baab;padding-left:2em;margin-left:5em;margin-right:0}
+.titles 		{background:#4E8238;padding-left:2em;margin-left:5em;margin-right:0}
 .H1, .pagetitle	{font-size:400%;line-height:1;padding-top:.64ex}
 .H2, .subtitle	{font-size:200%;line-height:1;padding-bottom:.64ex}
 
-.content-main		{margin:20px 20px 20px -10px}
-.repolist			{margin-right:20px}
-.repolist, .features{background:#162c59;margin-top:0}
-.repolist .inner	{padding:20px 30px}
+.content-main		{margin:20px 20px 10px -10px;padding:10px 0}
+.repolist			{margin-right:20px;margin-top:0}
+.repolist, .features{background-color:#001F4C}
+.repolist .inner	{padding:20px 30px 20px 40px}
 .features .inner	{padding:10px 20px}
 .media 				{text-align:right}
 .cover 				{max-width:100%;height:auto}
+.da-wo-die-boxen-drin-sind {padding:0 10px}
 
 body {
-	background-image: -webkit-linear-gradient(top, hsl(220,60%,22%) 0%, hsl(220,65%,40%) 30%, hsl(220,65%,40%) 65%, hsl(220,60%,22%) 100%);
-	background-image:    -moz-linear-gradient(top, hsl(220,60%,22%) 0%, hsl(220,65%,40%) 30%, hsl(220,65%,40%) 65%, hsl(220,60%,22%) 100%);
-	background-image:     -ms-linear-gradient(top, hsl(220,60%,22%) 0%, hsl(220,65%,40%) 30%, hsl(220,65%,40%) 65%, hsl(220,60%,22%) 100%);
-	background-image:      -o-linear-gradient(top, hsl(220,60%,22%) 0%, hsl(220,65%,40%) 30%, hsl(220,65%,40%) 65%, hsl(220,60%,22%) 100%);
-	background-image:  linear-gradient(to bottom,  hsl(220,60%,22%) 0%, hsl(220,65%,40%) 30%, hsl(220,65%,40%) 65%, hsl(220,60%,22%) 100%);
+	background-image: -webkit-linear-gradient(top, #012A6A 0%, #004797 30%, #004797 65%, #012A6A 100%);
+	background-image:    -moz-linear-gradient(top, #012A6A 0%, #004797 30%, #004797 65%, #012A6A 100%);
+	background-image:     -ms-linear-gradient(top, #012A6A 0%, #004797 30%, #004797 65%, #012A6A 100%);
+	background-image:      -o-linear-gradient(top, #012A6A 0%, #004797 30%, #004797 65%, #012A6A 100%);
+	background-image:  linear-gradient(to bottom,  #012A6A 0%, #004797 30%, #004797 65%, #012A6A 100%);
 }
-.titles, .cover, .features {box-shadow:0 0 1em hsl(220,60%,22%)}
+.titles, .cover, .features {box-shadow:0 0 10px #001F4C}
 .zips li {margin-left:4ex} /* wg. der columns :( */
 .zips {
 	-webkit-column-count:2;-webkit-column-gap:1em;
 	   -moz-column-count:2;   -moz-column-gap:1em;
 	        column-count:2;        column-gap:1em;
 }
-
+.zips li:before {}
 @media screen and (max-width:810px) {
 	.subtitle {font-size:160%}
 	.zips {-webkit-column-count:1;-moz-column-count:1;column-count:1;}
@@ -94,20 +95,20 @@ body {
 					<a href="http://time4mambo.de">Axel Tüting</a>
 					beschreiben Schritt für Schritt das Vorgehen vom Entwurf bis zur fertigen eigenen Komponente.</p>
 				</div>
-				<a href="https://github.com/MyThings"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
+				<a href="https://github.com/MyThings"><img style="position:absolute;top:0;right:0;border:0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" alt="Fork me on GitHub"></a>
 			</div>
 			</div>
 		</div>
 
 		<div class="unit size1of3 media">
-			<a href="http://www.amazon.de/gp/product/3645601341/ref=as_li_tf_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3645601341&linkCode=as2&tag=webme-21">
+			<a href="http://www.amazon.de/gp/product/3645601341/ref=as_li_tf_tl?ie=UTF8&camp=1638&creative=6742&creativeASIN=3645601341&linkCode=as2&tag=webme-21" style="display:inline-block;max-width:100%">
 			<img class="cover" src="assets/joomla-extensions-entwickeln-2012.jpg" width="350" height="500" alt="Buchcover: Joomla!-Extensions entwickeln" />
 			</a>
 			<p class="clr"><small>Affiliate</small></p>
 		</div>
 	</div>
 
-	<div class="line">
+	<div class="line da-wo-die-boxen-drin-sind">
 		<div class="unit size1of3">
 			<div class="mod features"><div class="inner">
 			<h3>Komponenten, Module und Plugins</h3>
